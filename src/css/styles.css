@@ -18,3 +18,36 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.countries-item{
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.countries-item:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.country-item-flag {
+  height: 30px;
+  width: auto;
+}
+
+.country-item-name {
+  display: inline;
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.country-name {
+  display: inline;
+}
