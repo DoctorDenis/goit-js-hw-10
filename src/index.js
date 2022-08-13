@@ -30,7 +30,7 @@ refs.searchBox.addEventListener(
 
     fetchCountries(event.target.value.trim())
       .then(countries => {
-        if (countries.length > 1 && countries.length < 10) {
+        if (countries.length > 1 && countries.length <= 10) {
           renderCountriesList(countries);
         } else if (countries.length > 10) {
           refs.listEl.innerHTML = '';
@@ -58,7 +58,10 @@ function renderCountriesList(countries) {
   const markup = countries
     .map(country => {
       return `<li class="countries-item" >
-                  <img class="country-item-flag" src="${country.flags.svg}" alt="Flag of the ${country.name}"><p class="country-item-name">${country.name}</p>
+                <span class="flag-wrapper">
+                   <img class="country-item-flag" src="${country.flags.svg}" alt="Flag of the ${country.name}">
+                </span>
+                <p class="country-item-name">${country.name}</p>
               </li>`;
     })
     .join('');
