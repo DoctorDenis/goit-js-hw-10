@@ -7,25 +7,43 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #c1ff88;
   color: #212121;
   line-height: 1.5;
+  font-size: 1.5rem;
 }
 
 #search-box {
   font: inherit;
-  padding: 8px;
+  padding: 8px 15px;
+  /* padding-left: 15px; */
   max-width: 320px;
+  margin-top: 100px;
   margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px black;
+}
+
+#search-box:focus {
+  box-shadow: inset 0px 0px 5px gray;
+  outline: none;
 }
 
 .country-list {
   list-style: none;
   padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
 }
 
 .countries-item{
-  padding: 0.5rem;
+  padding: 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -35,19 +53,35 @@ body {
   background-color: rgba(0, 0, 0, 0.07);
 }
 
+.flag-wrapper {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .country-item-flag {
   height: 30px;
   width: auto;
+  /* display: block;
+  margin: auto; */
 }
 
 .country-item-name {
   display: inline;
-  margin-left: 2rem;
-  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
   font-weight: 700;
   font-style: normal;
 }
 
 .country-name {
   display: inline;
+}
+
+.country-info {
+  margin: auto;
+  width: fit-content;
 }
